@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Version1</title>
+<script>
+    function fibonacci (number) {
+     //if number is 1 or 2  just return 1
+     //otherwise return sum of fibonacci of previous two //numbers
+        if(number === 1 || number ===2)return 1
+        return fibonacci(number-1) + fibonacci(number - 2)
+     }
+    function compute_and_display () {
+     // get the value from the input
+     //result = fibonacci(input)
+     //display result on the webpage
+        let input = document.getElementById('input').value
+        document.getElementById('output_goes_here').value = fibonacci(parseInt(input))
+     }
+</script>
+</head>
+<body>
+<!-- USER INPUTS A NUMBER -->
+<input type="text" id='input'>
+<!--BUTTON THAT RUNS "compute_and_display()" -->
+<button onclick = 'compute_and_display()'>Run</button>
+    <input type = text id="output_goes_here">
+</body>
+</html>
